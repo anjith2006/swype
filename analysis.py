@@ -1,4 +1,3 @@
-import swype
 import datetime
 import os
 import os.path
@@ -62,8 +61,8 @@ def AnalyzeTrajectory(trajectory):
         wordRank = [word, []]
         goodDataTime = np.mean(map(attrgetter('totalTimeSpent'), goodData))
         badDataTime = np.mean(map(attrgetter('totalTimeSpent'), badData))
-        goodDataAngle = mean(map(attrgetter('directionInDotOut'), goodData))
-        badDataAngle = mean(map(attrgetter('directionInDotOut'), badData))
+        goodDataAngle = np.mean(map(attrgetter('directionInDotOut'), goodData))
+        badDataAngle = np.mean(map(attrgetter('directionInDotOut'), badData))
         score = goodDataTime * 1 + badDataTime * - 1 + goodDataAngle * -2 + badDataAngle * 1 + len(Contract(word)) * (1/3.0)
         wordRank[1] = [goodDataTime, badDataTime, goodDataAngle, badDataAngle, score]
         wordRankings.append(wordRank)
@@ -72,7 +71,7 @@ def AnalyzeTrajectory(trajectory):
         print 'wordRank', wordRank
 
         
-    pdb.set_trace()
+    # pdb.set_trace()
     
 
 def LogData(trajectory, startIndex, endIndex):

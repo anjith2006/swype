@@ -18,7 +18,7 @@ qwertyPositions = [(12, 74), (34, 72), (59, 76),
 (136, 154), (160, 153), (187, 153)]
 
 def QwertyOrd(char):
-    index = 0
+    
     while index < len(qwertyString) and char != qwertyString[index]:
         index += 1
     return index
