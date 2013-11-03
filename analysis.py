@@ -67,7 +67,7 @@ def AnalyzeTrajectory(trajectory):
         wordRank[1] = [goodDataTime, badDataTime, goodDataAngle, badDataAngle, score]
         wordRankings.append(wordRank)
 
-    for wordRank in sorted(wordRankings, key=lambda x: -(x[1][-1])):
+    for wordRank in sorted(wordRankings, key=lambda x: -(x[1][-1]))[:10]:
         print 'wordRank', wordRank
 
         

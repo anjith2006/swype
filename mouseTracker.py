@@ -95,18 +95,19 @@ def main ():
         elif event.type == pygame.MOUSEBUTTONDOWN:
             linesToDraw = [event.pos]
             if recording:
+                analysis.AnalyzeTrajectory(trajectory)
                 while True:
                     event = pygame.event.poll()
                     if event.type == pygame.MOUSEBUTTONDOWN:
                         frameData = FrameData(event.pos)
                         if frameData.getClosestLetter() == 's':
                             trajectory.Pickle()
-                            break
-                        elif frameData.getClosestLetter() == 'c':
-                            break
+                        break
+                        #     break
+                        # elif frameData.getClosestLetter() == 'c':
+                        #     break
                     elif event.type == pygame.KEYDOWN:
                         trajectory.word += chr(event.key)
-                analysis.AnalyzeTrajectory(trajectory)
                 trajectory = SwypeTrajectory("training/trajectory" + re.sub(r' ', r'_', str(datetime.datetime.now())))
             recording = not recording
                 
