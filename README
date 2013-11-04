@@ -4,7 +4,7 @@ To try it out, download the mouseTracker.tar.gz and unpack with:
 
 $ tar -xf mouseTracker.tar.gz
 
-This will create a new directory in you folder. Inside this freshly unzipped directory will be the program executable, mouseTracker. You can run it with:
+This will create a new directory in you folder. Inside this freshly unzipped directory will be the program binary, mouseTracker. You can run it with:
 
 $ mouseTracker/mouseTracker
 
