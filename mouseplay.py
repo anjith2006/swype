@@ -7,59 +7,59 @@ import sys
 import re
 import analysis
 
-
+clock = pygame.time.Clock()
 qwertyString = "qwertyuiopasdfghjklzxcvbnm"
-qwertyPositions = [(61, 88)
+qwertyPositions = [(34, 60)
 ,
-(182, 93)
+(114, 59)
 ,
-(313, 96)
+(196, 59)
 ,
-(437, 96)
+(280, 65)
 ,
-(564, 98)
+(357, 61)
 ,
-(683, 97)
+(442, 60)
 ,
-(816, 93)
+(520, 59)
 ,
-(940, 92)
+(601, 59)
 ,
-(1058, 96)
+(680, 59)
 ,
-(1183, 95)
+(761, 61)
 ,
-(131, 251)
+(82, 162)
 ,
-(247, 251)
+(157, 167)
 ,
-(371, 261)
+(235, 166)
 ,
-(494, 254)
+(317, 166)
 ,
-(624, 263)
+(399, 167)
 ,
-(737, 260)
+(480, 166)
 ,
-(871, 260)
+(558, 164)
 ,
-(992, 260)
+(633, 164)
 ,
-(1111, 261)
+(715, 166)
 ,
-(253, 412)
+(157, 265)
 ,
-(376, 417)
+(238, 270)
 ,
-(502, 418)
+(319, 269)
 ,
-(621, 419)
+(395, 268)
 ,
-(743, 417)
+(477, 271)
 ,
-(861, 418)
+(555, 267)
 ,
-(988, 422)
+(637, 274)
 ]
 
 def QwertyOrd(char):
@@ -113,8 +113,8 @@ def main ():
     pygame.display.set_caption('Testing')
     pygame.init()
     
-    screen = pygame.display.set_mode((1242,644))
-    img = pygame.image.load("swnew.png")
+    screen = pygame.display.set_mode((797,414))
+    img = pygame.image.load("swype.png")
     screen.blit(img,(0,0))
     pygame.display.flip()
 
@@ -158,6 +158,7 @@ def main ():
                 
 
         screen.fill((0, 0, 0))
+        clock.tick(120)
         # pygame.display.flip()
 
 if (__name__ == '__main__'):
